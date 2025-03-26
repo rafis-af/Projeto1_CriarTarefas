@@ -45,7 +45,8 @@ codigo=salvarTarefas(&lt,arquivo);
 if(codigo ==0)
 printf("Erro ao salvar tarefas em arquivo");
 
-
+// A função main não está retornando nada, o que impede a execução do programa
+return 0;
 system ("pause");
 
 }
