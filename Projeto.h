@@ -9,8 +9,8 @@ typedef struct {
 typedef struct {
     Tarefa tarefas[100];
     int qtd;
-} ListaDeTarefa;
-
+} ListaDeTarefas; // Erro no nome da struct, deve ser ListaDeTarefas
+ 
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas *lt);
