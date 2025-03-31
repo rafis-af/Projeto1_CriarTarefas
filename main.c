@@ -4,7 +4,7 @@
 
 
 int main(){
-    ListaDeTarefas lt;
+    ListaDeTarefas lt = {0}; // Inicializa a lista de tarefas com 0 tarefas
 
     char arquivo[] = "tarefas";
     int codigo, opcao;
