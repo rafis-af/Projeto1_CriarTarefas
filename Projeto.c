@@ -30,7 +30,7 @@ int deletarTarefa(ListaDeTarefas *lt){
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
    
-   if (pos <0 || pos < lt->qtd - 1)
+   if (pos < 0 || pos >= lt -> qtd) // Esta condição está errada pois deveria verificar se "pos" é maior que 0 ou maior ou igual ao número total de tarefas.
    return 2;
    
    for (; pos<lt->qtd-1; pos++){
