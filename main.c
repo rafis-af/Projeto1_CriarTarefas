@@ -1,5 +1,7 @@
 #include "projeto.h"
 #include "stdio.h"
+#include "stdlib.h"
+
 
 int main(){
     ListaDeTarefas lt;
@@ -7,7 +9,7 @@ int main(){
     char arquivo[] = "tarefas";
     int codigo, opcao;
 
-    codigo = carregarTarefas(lt, arquivo);
+    codigo = carregarTarefas(&lt, arquivo);
 
     if (codigo !=0){
         printf("Lista de tarefas nao carregada");
@@ -44,8 +46,8 @@ int main(){
     if(codigo ==0)
         printf("Erro ao salvar tarefas em arquivo");
 
+    system("pause");
     // A função main não está retornando nada, o que impede a execução do programa
     return 0;
-    system ("pause");
 
 }

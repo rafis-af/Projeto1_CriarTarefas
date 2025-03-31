@@ -57,7 +57,7 @@ for(i=0; i< lt->qtd; i++){
     return 0;
 }
 
-int carregarTarefas(ListaDeTarefas *lt, char nome){
+int carregarTarefas(ListaDeTarefas *lt, char *nome){ // agora o char *nome é um ponteiro que aponta para uma string
    FILE *fp=fopen(nome, "rb");
    if (fp == NULL)
    return 1;
@@ -68,7 +68,7 @@ int carregarTarefas(ListaDeTarefas *lt, char nome){
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+   FILE *fp=fopen(nome, "wb"); // Adicionado ponto e vírgula   
    if (fp == NULL)
    return 1;
    
