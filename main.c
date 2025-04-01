@@ -1,7 +1,7 @@
 #include "Projeto.h" // Corrigido o nome do arquivo de cabeçalho para "Projeto.h"
 #include <stdio.h> // Corrigido o nome do arquivo de cabeçalho para <stdio.h>
 #include <string.h> // Corrigido o nome do arquivo de cabeçalho para <string.h>
-
+#include <stdlib.h> // Incluindo biblioteca stdlib.h para usar a função system()
 
 int main(){
     ListaDeTarefas lt;
@@ -34,7 +34,7 @@ int main(){
             printf("erro ao deletar tarefa: posicao invalida\n");
     } else if(opcao == 3){
         codigo = listarTarefas(&lt);
-    if (codigo ==1)
+    if (codigo == 1) // Erro de digitação, deve ser 1 pois listarTarefas retorna 1 quando não há tarefas 
         printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
     }
     else {
@@ -46,6 +46,7 @@ int main(){
     if(codigo ==0)
         printf("Erro ao salvar tarefas em arquivo");
 
+    system("pause");
     // A função main não está retornando nada, o que impede a execução do programa
     return 0;
 
