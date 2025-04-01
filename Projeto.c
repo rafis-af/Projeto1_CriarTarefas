@@ -1,6 +1,6 @@
-#include "projeto.h"
-#include "stdio.h"
-#include "string.h"
+#include "Projeto.h" // Corrigido o nome do arquivo de cabeçalho para "Projeto.h"
+#include <stdio.h> // Corrigido o nome do arquivo de cabeçalho para <stdio.h>
+#include <string.h> // Corrigido o nome do arquivo de cabeçalho para <string.h>
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
