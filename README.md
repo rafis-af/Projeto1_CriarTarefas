@@ -9,3 +9,4 @@
 7. Na função "criarTarefa", o operador "->" do ponteiro está com um erro de digitação que impedia a leitura do código;
 8. No arquivo "projeto.h", na função "carregarTarefas", o char *nome está escrito errado, o correto seria "nome" ao invés de "nomes";
 9. As bibliotecas estavam com sintaxe erradas, o que impedia a importação das mesmas;
+10. Corrigido o número máximo de tarefas;

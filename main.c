@@ -46,7 +46,6 @@ int main(){
     if(codigo ==0)
         printf("Erro ao salvar tarefas em arquivo");
 
-    system("pause");
     // A função main não está retornando nada, o que impede a execução do programa
     return 0;
 

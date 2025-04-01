@@ -1,4 +1,4 @@
-#define TOTAL_TAREFAS 5
+#define TOTAL_TAREFAS 100 // Número máximo de tarefas ajustado
 
 typedef struct {
     int prioridade;
@@ -7,7 +7,7 @@ typedef struct {
 } Tarefa;
 
 typedef struct {
-    Tarefa tarefas[100];
+    Tarefa tarefas[TOTAL_TAREFAS]; // Corrigido o nome da variável para tarefas, ao invés de "tarefas"
     int qtd;
 } ListaDeTarefas; // Erro no nome da struct, deve ser ListaDeTarefas
  
