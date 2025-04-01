@@ -9,11 +9,11 @@ int main(){
     char arquivo[] = "tarefas";
     int codigo, opcao;
 
-    codigo = carregarTarefas(&lt, arquivo);
+    codigo=carregarTarefas(&lt, arquivo); 
 
-    if (codigo !=0){
+    if (codigo != 0){
         printf("Lista de tarefas nao carregada");
-        lt.qtd=2;
+        lt.qtd = 0; // Inicializa a quantidade de tarefas como 0 se o carregamento falhar
     }
 
     do{
@@ -34,7 +34,7 @@ int main(){
             printf("erro ao deletar tarefa: posicao invalida\n");
     } else if(opcao == 3){
         codigo = listarTarefas(&lt);
-    if (codigo ==2)
+    if (codigo ==1)
         printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
     }
     else {

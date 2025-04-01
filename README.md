@@ -11,3 +11,5 @@
 9. As bibliotecas estavam com sintaxe erradas, o que impedia a importação das mesmas;
 10. Corrigido o número máximo de tarefas;
 11. Ajustando a formatação do menu em "Projeto.c";
+12. No arquivo "main.c", o código "lt.qtd=2" está errado, o correto seria "lt.qtd=0", para iniciar a quantidade de tarefas como 0;
+
