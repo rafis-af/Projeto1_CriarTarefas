@@ -30,7 +30,7 @@ int deletarTarefa(ListaDeTarefas *lt){
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
    
-   if (pos <0 || pos < lt->qtd - 1)
+   if (pos < 0 || pos >= lt -> qtd) // Para garantir que a posição esteja dentro do intervalo válido, deve-se verificar se pos é menor que 0 ou maior ou igual a lt->qtd.
    return 2;
    
    for (; pos<lt->qtd-1; pos++){
