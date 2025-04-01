@@ -43,7 +43,7 @@ int main(){
     } while (opcao != 0);
 
     codigo=salvarTarefas(&lt,arquivo);
-    if(codigo ==0)
+    if(codigo != 0) // Erro de digitação, deve ser != 0 pois salvarTarefas retorna 0 quando não há erro
         printf("Erro ao salvar tarefas em arquivo");
 
     system("pause");
