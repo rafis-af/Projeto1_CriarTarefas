@@ -78,7 +78,7 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
 }
 
 void exibeMenu(){
-    printf("menu\n");
+    printf("\nmenu\n"); // ajustando a formatação
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
