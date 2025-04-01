@@ -6,7 +6,7 @@ int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
     return 1;
     
-	Tarefa *t=&lt->tarefas[lt->qtd];
+    Tarefa *t = &lt->tarefas[lt->qtd]; // Erro de digitação no operador "->"
 
     printf("Entre com a prioridade da tarefa: ");
     scanf("%d", &t->prioridade);
