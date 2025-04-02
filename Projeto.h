@@ -14,7 +14,9 @@ typedef struct {
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas *lt);
-
 int carregarTarefas(ListaDeTarefas *lt, char *nome); // Corrigido o nome do parâmetro para char *nome, ao invés de "nomes" 
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
+
+int editarTarefa(ListaDeTarefas *lt);
+
 void exibeMenu();

@@ -25,17 +25,23 @@ int main(){
     } else if(opcao == 1){
         codigo = criarTarefa(&lt);
         if (codigo == 1)
-        printf("erro ao criar tarefa: Sem espaço disponível\n");
+        printf("Erro ao criar tarefa: Sem espaço disponível\n");
     } else if(opcao == 2){
         codigo = deletarTarefa(&lt);
         if (codigo == 1)
-            printf("erro ao deletar tarefa: nao existem tarefas para deletar\n");
+            printf("Erro ao deletar tarefa: nao existem tarefas para deletar\n");
         else if(codigo == 2)
-            printf("erro ao deletar tarefa: posicao invalida\n");
+            printf("Erro ao deletar tarefa: posicao invalida\n");
     } else if(opcao == 3){
         codigo = listarTarefas(&lt);
     if (codigo == 1) // Erro de digitação, deve ser 1 pois listarTarefas retorna 1 quando não há tarefas 
         printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
+    } else if(opcao == 4){
+        codigo = editarTarefa(&lt);
+        if (codigo == 1)
+            printf("Erro ao editar tarefa: sem tarefa para editar\n");
+        else if(codigo == 2)
+            printf("Erro ao editar tarefa: posicao invalida\n");
     }
     else {
         printf("opcao invalida\n");

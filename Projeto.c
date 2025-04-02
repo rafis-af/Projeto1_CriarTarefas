@@ -43,6 +43,7 @@ int deletarTarefa(ListaDeTarefas *lt){
     lt->qtd--;
 	return 0;
 }
+
 int listarTarefas(ListaDeTarefas *lt){
 	if(lt->qtd == 0)
 	return 1;
@@ -77,11 +78,43 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
    return 0;
 }
 
+int editarTarefa(ListaDeTarefas *lt){
+    if(lt -> qtd == 0){
+        printf("Sem tarefas para editar\n");
+        return 1;
+    }
+
+    int pos;
+    printf("Digite a posicao que deseja editar (0 a %d): ", lt -> qtd - 1);
+    scanf("%d", &pos);
+
+    if (pos < 0 || pos >= lt -> qtd){
+        printf("Posicao invalida\n");
+        return 2;
+    }
+
+    Tarefa *t = &lt -> tarefas[pos];
+
+    printf("Digite a nova prioridade: ");
+    scanf("%d", &t -> prioridade);
+
+    printf("Digite a nova categoria: ");
+    scanf(" %[^\n]s", t -> categoria);
+
+    printf("Digite a nova descricao: ");
+    scanf(" %[^\n]s", t -> descricao);
+
+    printf("Tarefa editada!\n");
+
+    return 0;
+}
+
 void exibeMenu(){
-    printf("\nmenu\n"); // ajustando a formatação
+    printf("\nMenu\n"); // ajustando a formatação
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
+    printf("4. Editar tarefa\n");
 	printf("0. Sair\n");
-	}
+}
 
