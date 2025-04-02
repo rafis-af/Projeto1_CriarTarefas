@@ -109,47 +109,45 @@ int editarTarefas(ListaDeTarefas *lt){    // Criação da função de edição d
     return 0;
 }
 
-int ordenarTarefas(ListaDeTarefas *lt, int prioridade){ // Criação da função de ordenar tarefas por prioridade
-    if(lt -> qtd <= 1){
+int ordenarTarefas(ListaDeTarefas *lt) {
+    if (lt->qtd <= 1) {
         printf("Sem tarefas para ordenar\n");
         return 1;
     }
 
-    for (int i = 0; i < lt -> qtd - 1; i++){
-        for (int j = i + 1; j < lt -> qtd; j++){
-            if (lt -> tarefas[i].prioridade > lt -> tarefas[j].prioridade){
-                Tarefa temp = lt -> tarefas[i];
-                lt -> tarefas[i] = lt -> tarefas[j];
-                lt -> tarefas[j] = temp;
+    for (int i = 0; i < lt->qtd - 1; i++) {
+        for (int j = i + 1; j < lt->qtd; j++) {
+            if (lt->tarefas[i].prioridade > lt->tarefas[j].prioridade) {
+                Tarefa temp = lt->tarefas[i];
+                lt->tarefas[i] = lt->tarefas[j];
+                lt->tarefas[j] = temp;
             }
         }
     }
+
     printf("Tarefas ordenadas por prioridade\n");
+    listarTarefas(lt); // Exibe a lista ordenada
     return 0;
 }
 
-int buscarTarefas(ListaDeTarefas *lt, char *categoria){ // Criação da função de buscar tarefas por categoria
-    if (lt -> qtd == 0){
+int buscarTarefas(ListaDeTarefas *lt, char *categoria) { // Criacao da funcao de busca de tarefas
+    if (lt->qtd == 0) {
         printf("Sem tarefas para buscar\n");
         return 1;
     }
 
-    char buscarCategoria[100];
-    printf("Digite a categoria que deseja buscar: ");
-    scanf(" %[^\n]s", buscarCategoria);
-
     int achou = 0;
-    printf("Tarefas encontradas na categoria '%s':\n", buscarCategoria);
+    printf("Tarefas encontradas na categoria '%s':\n", categoria);
     
-    for (int i = 0; i < lt -> qtd; i++){
-        if (strcmp(lt -> tarefas[i].categoria, categoria) == 0){
-            printf("Posicao: %d \t Prioridade: %d\n", i, lt -> tarefas[i].prioridade);
-            printf("Descricao: %s\n", lt -> tarefas[i].descricao);
+    for (int i = 0; i < lt->qtd; i++) {
+        if (strcmp(lt->tarefas[i].categoria, categoria) == 0) {
+            printf("Posicao: %d \t Prioridade: %d\n", i, lt->tarefas[i].prioridade);
+            printf("Descricao: %s\n", lt->tarefas[i].descricao);
             achou = 1;
         }
     }
-    if (!achou){
-        printf("Nenhuma tarefa encontrada na categoria '%s'\n", buscarCategoria);
+    if (!achou) {
+        printf("Nenhuma tarefa encontrada na categoria '%s'\n", categoria);
     }
     return 0;
 }
