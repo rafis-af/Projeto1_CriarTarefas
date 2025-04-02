@@ -25,3 +25,7 @@
 20. Função "ordenarTarefas" adicionada no "Menu" do arquivo "main.c";
 21. Função "ordenarTarefas" declarada no arquivo "Projeto.h";
 22. Função "ordenarTarefas" implementada no arquivo "Projeto.c";
+23. Na função "buscarTarefas", é possível buscar tarefas por categoria;
+24. Função "buscarTarefas" adicionada no "Menu" do arquivo "main.c";
+25. Função "buscarTarefas" declarada no arquivo "Projeto.h";
+26. Função "buscarTarefas" implementada no arquivo "Projeto.c";

@@ -112,7 +112,7 @@ int editarTarefas(ListaDeTarefas *lt){    // Criação da função de edição d
 int ordenarTarefas(ListaDeTarefas *lt){ // Criação da função de ordenar tarefas por prioridade
     if(lt -> qtd <= 1){
         printf("Sem tarefas para ordenar\n");
-        return;
+        return 1;
     }
 
     for (int i = 0; i < lt -> qtd - 1; i++){
@@ -127,13 +127,38 @@ int ordenarTarefas(ListaDeTarefas *lt){ // Criação da função de ordenar tare
     printf("Tarefas ordenadas por prioridade\n")
 }
 
+int buscarTarefas(ListaDeTarefas *lt){ // Criação da função de buscar tarefas por categoria
+    if (lt -> qtd == 0){
+        printf("Sem tarefas para buscar\n");
+        return 1;
+    }
+
+    char buscarCategoria[100].
+    printf("Digite a categoria que deseja buscar: ");
+    scanf(" %[^\n]s", buscarCategoria);
+
+    int achou = 0;
+    printf("Tarefas encontradas na categoria '%s':\n", buscarCategoria);
+    
+    for (int i = 0; i < lt -> qtd; i++){
+        if (strcmp(lt -> tarefas[i].categoria, buscarCategoria) == 0){
+            printf("Posicao: %d \t Prioridade: %d\n", i, lt -> tarefas[i].prioridade);
+            printf("Descricao: %s\n", lt -> tarefas[i].descricao);
+            achou = 1;
+        }
+    }
+    if (!achou){
+        printf("Nenhuma tarefa encontrada na categoria '%s'\n", buscarCategoria);
+    }
+}
 void exibeMenu(){
-    printf("\nMenu\n"); // ajustando a formatação
+    printf("\n======Menu======\n"); // ajustando a formatação
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
     printf("4. Editar tarefa\n");
     printf("5. Ordenar tarefas\n");
+    printf("6. Buscar tarefas\n")
 	printf("0. Sair\n");
 }
 

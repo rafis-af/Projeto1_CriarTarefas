@@ -46,6 +46,14 @@ int main(){
         codigo = ordenarTarefas(&lt);
         if (codigo == 1)
             printf("Sem tarefas para ordenar\n");
+    } else if(opcao == 6){ // Adicionando opção de buscar tarefa no menu
+        char categoria[100];
+        printf("Digite a categoria que deseja buscar: ");
+        scanf("%s", categoria);
+
+        codigo = buscarTarefas(&lt, categoria);
+        if (codigo == 1)
+            printf("Nenhuma tarefa encontrada nessa categoria\n");
     }
     else {
         printf("opcao invalida\n");
