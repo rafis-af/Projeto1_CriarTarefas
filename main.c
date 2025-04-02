@@ -36,12 +36,16 @@ int main(){
         codigo = listarTarefas(&lt);
     if (codigo == 1) // Erro de digitação, deve ser 1 pois listarTarefas retorna 1 quando não há tarefas 
         printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
-    } else if(opcao == 4){
-        codigo = editarTarefa(&lt);
+    } else if(opcao == 4){ // Adicionando opção de editar tarefa no menu
+        codigo = editarTarefas(&lt);
         if (codigo == 1)
             printf("Erro ao editar tarefa: sem tarefa para editar\n");
         else if(codigo == 2)
             printf("Erro ao editar tarefa: posicao invalida\n");
+    } else if(opcao == 5){ // Adicionando opção de ordenar tarefas no menu
+        codigo = ordenarTarefas(&lt);
+        if (codigo == 1)
+            printf("Sem tarefas para ordenar\n");
     }
     else {
         printf("opcao invalida\n");

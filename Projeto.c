@@ -78,7 +78,7 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
    return 0;
 }
 
-int editarTarefa(ListaDeTarefas *lt){
+int editarTarefas(ListaDeTarefas *lt){    // Criação da função de edição de tarefas
     if(lt -> qtd == 0){
         printf("Sem tarefas para editar\n");
         return 1;
@@ -109,12 +109,31 @@ int editarTarefa(ListaDeTarefas *lt){
     return 0;
 }
 
+int ordenarTarefas(ListaDeTarefas *lt){ // Criação da função de ordenar tarefas por prioridade
+    if(lt -> qtd <= 1){
+        printf("Sem tarefas para ordenar\n");
+        return;
+    }
+
+    for (int i = 0; i < lt -> qtd - 1; i++){
+        for (int j = i + 1; j < lt -> qtd; j++){
+            if (lt -> tarefas[i].prioridade > lt -> tarefas[j].prioridade){
+                Tarefa temp = lt -> tarefas[i];
+                lt -> tarefas[i] = lt -> tarefas[j];
+                lt -> tarefas[j] = temp;
+            }
+        }
+    }
+    printf("Tarefas ordenadas por prioridade\n")
+}
+
 void exibeMenu(){
     printf("\nMenu\n"); // ajustando a formatação
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
     printf("4. Editar tarefa\n");
+    printf("5. Ordenar tarefas\n");
 	printf("0. Sair\n");
 }
 

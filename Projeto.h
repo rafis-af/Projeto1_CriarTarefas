@@ -17,6 +17,6 @@ int listarTarefas(ListaDeTarefas *lt);
 int carregarTarefas(ListaDeTarefas *lt, char *nome); // Corrigido o nome do parâmetro para char *nome, ao invés de "nomes" 
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
 
-int editarTarefa(ListaDeTarefas *lt);
-
+int editarTarefas(ListaDeTarefas *lt);  // Declaração da função de edição de tarefas
+int ordenarTarefas(ListaDeTarefas *lt); // Declaração da função de ordenar tarefas por prioridade
 void exibeMenu();
