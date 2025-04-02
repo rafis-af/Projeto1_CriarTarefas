@@ -19,5 +19,5 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome);
 
 int editarTarefas(ListaDeTarefas *lt);  // Declaração da função de edição de tarefas
 int ordenarTarefas(ListaDeTarefas *lt); // Declaração da função de ordenar tarefas por prioridade
-int buscarTarefas(ListaDeTarefas *lt); // Declaração da função de buscar tarefas por categoria
+int buscarTarefas(ListaDeTarefas *lt, char *categoria); // Declaração da função de buscar tarefas por categoria
 void exibeMenu();

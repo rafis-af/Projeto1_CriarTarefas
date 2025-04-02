@@ -1,3 +1,8 @@
+# Integrantes do grupo
+
+Rafael Almeida Ferreira | RA: 24.224.013-3;
+Renan Sartori Evangelista | RA: 24.224.004-2;
+
 # Corrigindo erros e bugs
 
 1. A função main não está retornando nada, impedindo a execução do programa;
@@ -13,7 +18,7 @@
 11. Ajustando a formatação do menu em "Projeto.c";
 12. No arquivo "main.c", o código "lt.qtd=2" está errado, o correto seria "lt.qtd=0", para iniciar a quantidade de tarefas como 0;
 13. No arquivo "main.c", o código "if (codigo == 2)" em listarTarefas está errado, pois deve ser 1 pois listarTarefas retorna 1 quando não há tarefas;
-14. No arquivo "main.c", a condição if(codigo == 0) está errada pois teria que ser diferente de zero, ou seja, (codigo != 0);
+14. No arquivo "main.c", a condição if(codigo == 0) está errada pois teria que ser diferente de zero, ou seja, (codigo != 0).
 
 # Melhorias e adições 
 
@@ -28,4 +33,4 @@
 23. Na função "buscarTarefas", é possível buscar tarefas por categoria;
 24. Função "buscarTarefas" adicionada no "Menu" do arquivo "main.c";
 25. Função "buscarTarefas" declarada no arquivo "Projeto.h";
-26. Função "buscarTarefas" implementada no arquivo "Projeto.c";
+26. Função "buscarTarefas" implementada no arquivo "Projeto.c".
